@@ -25,3 +25,10 @@ python training/train.py
 
 This will result in a trained model being saved to the `models/` directory.
 
+## Running the server
+
+```
+python server/server.py
+```
+
+This starts a Flask server, ready to accept inference requests.
