@@ -1,3 +1,4 @@
 *~
 env/
 models/*.pkl
+.ipynb_checkpoints
