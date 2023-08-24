@@ -26,15 +26,11 @@ def create_training_set():
     logging.info("Preparing data for train and test")
     df = pd.read_csv("data/houses.csv", index_col="date")
 
-    target = "price"
-    prediction = "predicted_price"
-    datetime = "date"
-
     features = ["bedrooms", "bathrooms", "sqft_living", "sqft_lot", "floors",
         "waterfront", "view", "condition", "grade", "yr_built"]
 
     X = df[features].values
-    y = df[target].values
+    y = df["price"].values
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE)
 
